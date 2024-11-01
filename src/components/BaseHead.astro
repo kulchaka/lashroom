@@ -1,0 +1,49 @@
+---
+import "../styles/global.css";
+import { AstroSeo } from '@astrolib/seo';
+import Favicons from "./global/Favicons.astro";
+
+---
+<AstroSeo
+  title="lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci"
+  description="Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy."
+  canonical="https://www.lashroom.cz"
+  openGraph={{
+    url: "https://www.lashroom.cz",
+    title: "lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci",
+    description: "Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy.",
+    images: [
+      {
+        url: "https://www.lashroom.cz/images/lash-extension-illustration.png",
+        width: 800,
+        height: 600,
+        alt: "Ilustrace prodlužování řas",
+        type: "image/jpeg",
+      },
+      {
+        url: "https://www.lashroom.cz/images/course-certificate.png",
+        width: 800,
+        height: 600,
+        alt: "Certifikát kurzu lashroom.cz",
+        type: "image/jpeg",
+      },
+    ],
+    site_name: "lashroom.cz",
+  }}
+  twitter={{
+    handle: "@lashroom.cz",
+    site: "https://www.lashroom.cz",
+    cardType: "summary_large_image",
+  }}
+/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="author" content="Katya lashroom.cz" />
+<meta name="keywords" content="prodlužování řas Olomouc, kurzy prodlužování řas, lashroom.cz Olomouc, profesionální řasy, beauty kurzy, lash stylist Olomouc, kurzy krásy" />
+
+<Favicons/>
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>

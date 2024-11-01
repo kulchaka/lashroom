@@ -1,0 +1,166 @@
+<section class='scroll-mt-24' id='faq'>
+  <div class='px-8 md:px-12 py-12 max-w-2xl mx-auto'>
+    <div class=''>
+      <h2 class='text-3xl tracking-tighter font-light lg:text-4xl text-black'>
+        Odpovědi na nejčastější otázky klientů
+      </h2>
+      <p class='mt-5 text-black'>
+        Nemůžete najít odpověď? Pošlete nám <a
+          class='text-blue-400 hover:text-black duration-200'
+          href='mailto:gamu4ka@gmail.com'>email</a
+        > a co nejdříve vám odpovíme.
+      </p>
+    </div>
+    <div x-data='{selected:null}'>
+      <ul
+        class='list-none text-black bg-white rounded-3xl divide-y divide-zinc-200 mt-8'
+        role='list'
+      >
+        <!-- FAQ: Difference between lash extension types -->
+        <li class='relative'>
+          <button
+            class='w-full p-4 text-left'
+            @click='selected !== 1 ? selected = 1 : selected = null'
+            type='button'
+          >
+            <div class='items-center flex justify-between text-black'>
+              <p class='text-lg tracking-tight text-black'>
+                Jaký je rozdíl mezi jednotlivými typy prodlužování řas?
+              </p>
+              <svg
+                class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
+                :class="{'rotate-180': selected == 1}"
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+                  clip-rule='evenodd'
+                  fill-rule='evenodd'></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class='relative overflow-hidden duration-700 max-h-0 transition-all'
+            x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
+            x-ref='container1'
+          >
+            <div class='text-sm text-zinc-500 p-8 pt-0'>
+              Nabízíme různé typy prodlužování řas: Classic, Light Volume, Super Volume, Cashmere, a
+              Mega Volume. Každý typ se liší intenzitou, objemem, a efektem, který poskytuje.
+              Classic je pro přirozený vzhled, zatímco Mega Volume poskytuje dramatický vzhled díky
+              vyššímu počtu a hustotě řas.
+            </div>
+          </div>
+        </li>
+
+        <!-- FAQ: Lash extension duration -->
+        <li class='relative'>
+          <button
+            class='w-full p-4 text-left'
+            @click='selected !== 2 ? selected = 2 : selected = null'
+            type='button'
+          >
+            <div class='items-center flex justify-between text-black'>
+              <p class='text-lg tracking-tight text-black'>Jak dlouho prodloužené řasy vydrží?</p>
+              <svg
+                class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
+                :class="{'rotate-180': selected == 2}"
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+                  clip-rule='evenodd'
+                  fill-rule='evenodd'></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class='relative overflow-hidden duration-700 max-h-0 transition-all'
+            x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''"
+            x-ref='container2'
+          >
+            <div class='text-sm text-zinc-500 p-8 pt-0'>
+              Životnost prodloužených řas závisí na individuálním růstovém cyklu přirozených řas,
+              běžně se pohybuje mezi 2 až 5 týdny. Doporučujeme doplnění po 2–3 týdnech pro
+              optimální vzhled.
+            </div>
+          </div>
+        </li>
+
+        <!-- FAQ: Course Structure -->
+        <li class='relative'>
+          <button
+            class='w-full p-4 text-left'
+            @click='selected !== 3 ? selected = 3 : selected = null'
+            type='button'
+          >
+            <div class='items-center flex justify-between text-black'>
+              <p class='text-lg tracking-tight text-black'>
+                Jaká je struktura kurzu prodlužování řas?
+              </p>
+              <svg
+                class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
+                :class="{'rotate-180': selected == 3}"
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+                  clip-rule='evenodd'
+                  fill-rule='evenodd'></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class='relative overflow-hidden duration-700 max-h-0 transition-all'
+            x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''"
+            x-ref='container3'
+          >
+            <div class='text-sm text-zinc-500 p-8 pt-0'>
+              Kurz zahrnuje historii prodlužování řas, organizaci pracovního prostoru, dezinfekci a
+              sterilizaci, typy řas a jejich strukturu, techniky modelování, různé techniky
+              prodlužování a stylingových efektů.
+            </div>
+          </div>
+        </li>
+
+        <!-- FAQ: Challenges of Lash Stylist Work -->
+        <li class='relative'>
+          <button
+            class='w-full p-4 text-left'
+            @click='selected !== 4 ? selected = 4 : selected = null'
+            type='button'
+          >
+            <div class='items-center flex justify-between text-black'>
+              <p class='text-lg tracking-tight text-black'>Jak ?</p>
+              <svg
+                class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
+                :class="{'rotate-180': selected == 4}"
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+                  clip-rule='evenodd'
+                  fill-rule='evenodd'></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class='relative overflow-hidden duration-700 max-h-0 transition-all'
+            x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
+            x-ref='container4'
+          >
+            <div class='text-sm text-zinc-500 p-8 pt-0'></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -4,210 +4,216 @@
 
     <div class='grid grid-cols-1 gap-4 md:grid-cols-2 cards'>
       <!-- Classic Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          CLASSIC
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li class='flex items-center'>
-            <strong>Nový Set</strong>: 1700 Kč
-          </li>
-          <li class='flex items-center'>
-            <strong>Doplnění</strong>:
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />
-            2 týdny - 600 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />
-            3 týdny - 700 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />
-            4 týdny - 1000 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />
-            5 týdnů - 1300 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <!-- Left part (list) and right part (image) in one flex-container -->
+
+        <!-- Left part with text -->
+        <div class='flex-grow'>
+          <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
+            CLASSIC
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li class='flex items-center'>
+              <strong>Nový Set</strong>: 1700 Kč
+            </li>
+            <li class='flex items-center'>
+              <strong>Doplnění</strong>:
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />
+              2 týdny - 600 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />
+              3 týdny - 700 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />
+              4 týdny - 1000 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />
+              5 týdnů - 1300 Kč
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right side (image) -->
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Light Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          LIGHT VOLUME (2D - 3D)
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li><strong>Nový Set</strong>: 2000 Kč</li>
-          <li><strong>Doplnění</strong>:</li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 700 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 800 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1000 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1300 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            LIGHT VOLUME (2D - 3D)
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li><strong>Nový Set</strong>: 2000 Kč</li>
+            <li><strong>Doplnění</strong>:</li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 700 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 800 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1000 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1300 Kč
+            </li>
+          </ul>
+        </div>
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Super Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          SUPER VOLUME (6D - 8D)
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li><strong>Nový Set</strong>: 2900 Kč</li>
-          <li><strong>Doplnění</strong>:</li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 900 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 1000 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1300 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1600 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            SUPER VOLUME (6D - 8D)
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li><strong>Nový Set</strong>: 2900 Kč</li>
+            <li><strong>Doplnění</strong>:</li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 900 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 1000 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1300 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1600 Kč
+            </li>
+          </ul>
+        </div>
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Cashmere Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          CASHMERE
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li><strong>Nový Set</strong>: 1850 Kč</li>
-          <li><strong>Doplnění</strong>:</li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 650 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 750 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 900 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1100 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            CASHMERE
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li><strong>Nový Set</strong>: 1850 Kč</li>
+            <li><strong>Doplnění</strong>:</li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 650 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 750 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 900 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1100 Kč
+            </li>
+          </ul>
+        </div>
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Mega Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          MEGA VOLUME (4D - 5D)
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li><strong>Nový Set</strong>: 2500 Kč</li>
-          <li><strong>Doplnění</strong>:</li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 800 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 900 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1100 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1400 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            MEGA VOLUME (4D - 5D)
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li><strong>Nový Set</strong>: 2500 Kč</li>
+            <li><strong>Doplnění</strong>:</li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 800 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 900 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1100 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1400 Kč
+            </li>
+          </ul>
+        </div>
+
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Brows Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          BROWS
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li class='flex items-center'>
-            <img src='/browsmake.png' alt='Icon' class='w-5 h-5 mr-2' />Trvarovaný - 150 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/browscolor.png' alt='Icon' class='w-5 h-5 mr-2' />Barvení - 150 Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            BROWS
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li class='flex items-center'>
+              <img src='/brow.png' alt='Icon' class='w-5 h-5 mr-2' />Trvarovaný - 150 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/browcolor.png' alt='Icon' class='w-5 h-5 mr-2' />Barvení - 150 Kč
+            </li>
+          </ul>
+        </div>
+
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
 
       <!-- Additional Services Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card'>
-        <img
-          src='/eye.png'
-          alt='Decorative icon'
-          class='absolute top-4 right-4 w-14 h-14 rounded-full'
-        />
-        <h3
-          class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-        >
-          SPODNÝ RASY
-        </h3>
-        <ul class='mt-4 text-zinc-700 space-y-2'>
-          <li class='flex items-center'>
-            <img src='/foam.png' alt='Icon' class='w-5 h-5 mr-2' />Pena - 350 - 450 Kč
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech -
-            Nový Set
-          </li>
-          <li class='flex items-center'>
-            <img src='/eyelashcolor.png' alt='Icon' class='w-5 h-5 mr-2' />6 týdnů - Nový Set: 400
-            Kč
-          </li>
-        </ul>
+      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
+        <div class='flex-grow'>
+          <h3
+            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+          >
+            SPODNÝ RASY
+          </h3>
+          <ul class='mt-4 text-zinc-700 space-y-2'>
+            <li class='flex items-center'>
+              <img src='/foam.png' alt='Icon' class='w-5 h-5 mr-2' />Pena - 350 - 450 Kč
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech -
+              Nový Set
+            </li>
+            <li class='flex items-center'>
+              <img src='/eyelashes.png' alt='Icon' class='w-5 h-5 mr-2' />6 týdnů - Nový Set: 400 Kč
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right side (image) -->
+        <div class='flex-shrink-0 flex items-center h-full'>
+          <img src='/eye.png' alt='Decorative icon' class='w-24 h-24 rounded-lg object-cover' />
+        </div>
       </div>
     </div>
   </div>

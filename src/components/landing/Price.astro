@@ -6,7 +6,6 @@
         <!-- Classic Section -->
         <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
           <!-- Left part (list) and right part (image) in one flex-container -->
-
           <!-- Left part with text -->
           <div class='flex-grow'>
             <h3
@@ -193,7 +192,9 @@
           <div class='flex items-center justify-between'>
             <!-- Text content -->
             <div class='flex-grow'>
-              <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
+              <h3
+                class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'
+              >
                 SPODNÝ RASY
               </h3>
               <ul class='mt-4 text-zinc-700 space-y-2'>
@@ -201,7 +202,8 @@
                   <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Spodný rasy - 450 Kč
                 </li>
                 <li class='flex items-center'>
-                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech - Nový Set
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech - Nový
+                  Set
                 </li>
                 <li class='flex items-center'>
                   <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Pena - 400 Kč
@@ -217,12 +219,14 @@
               />
             </div>
           </div>
-        
+
           <!-- BROWS Section -->
           <div class='flex items-center justify-between'>
             <!-- Text content -->
             <div class='flex-grow'>
-              <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
+              <h3
+                class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'
+              >
                 BROWS
               </h3>
               <ul class='mt-4 text-zinc-700 space-y-2'>
@@ -244,68 +248,27 @@
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  @media (max-width: 768px) {
-    .cards-container {
-      position: relative;
-    }
-
-    .card {
-      position: sticky;
-      top: 80px;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.4s ease-out;
-      will-change: transform, opacity;
-    }
-
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card:nth-child(1) { z-index: 1; }
-    .card:nth-child(2) { z-index: 2; }
-    .card:nth-child(3) { z-index: 3; }
-    .card:nth-child(4) { z-index: 4; }
-    .card:nth-child(5) { z-index: 5; }
-    .card:nth-child(6) { z-index: 6; }
-    .card:nth-child(7) { z-index: 7; }
-  }
+  @media (max-width: 768px) { .cards-container { position: relative; } .card { position: sticky;
+  top: 80px; opacity: 0; transform: translateY(20px); transition: all 0.4s ease-out; will-change:
+  transform, opacity; } .card.visible { opacity: 1; transform: translateY(0); } /* Ефект сходинок
+  для нерухомих карток */ .card.stacked:nth-child(1) { top: 80px; } .card.stacked:nth-child(2) {
+  top: 84px; } .card.stacked:nth-child(3) { top: 88px; } .card.stacked:nth-child(4) { top: 92px; }
+  .card.stacked:nth-child(5) { top: 96px; } .card.stacked:nth-child(6) { top: 100px; }
+  .card.stacked:nth-child(7) { top: 104px; } }
 </style>
 
 <script>
-  if (window.innerWidth < 768) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    });
-
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-      card.style.zIndex = index + 1;
-      observer.observe(card);
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        cards.forEach(card => {
-          observer.unobserve(card);
-          card.classList.remove('visible');
-        });
-      }
-    });
-  }
+  if (window.innerWidth < 768) { const cards = document.querySelectorAll('.card'); const observer =
+  new IntersectionObserver((entries) => { entries.forEach((entry, index) => { if
+  (entry.isIntersecting) { entry.target.classList.add('visible'); } else if
+  (entry.boundingClientRect.top < 80) { entry.target.classList.add('stacked'); } }); }, { root:
+  null, rootMargin: '0px', threshold: 0.1 }); cards.forEach(card => observer.observe(card));
+  window.addEventListener('resize', () => { if (window.innerWidth >= 768) { cards.forEach(card => {
+  observer.unobserve(card); card.classList.remove('visible', 'stacked'); }); } }); }
 </script>

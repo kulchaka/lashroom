@@ -1,243 +1,311 @@
 <section class='scroll-mt-4 bg-gray-100' id='price'>
   <div class='px-4 md:px-12 py-8 md:py-12 max-w-5xl mx-auto'>
     <h2 class='text-2xl tracking-tighter font-light lg:text-4xl text-black mb-10'>Ceník</h2>
+    <div class='container'>
+      <div class='grid grid-cols-1 gap-4 md:grid-cols-2 cards-container'>
+        <!-- Classic Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
+          <!-- Left part (list) and right part (image) in one flex-container -->
 
-    <div class='grid grid-cols-1 gap-4 md:grid-cols-2 cards'>
-      <!-- Classic Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
-        <!-- Left part (list) and right part (image) in one flex-container -->
+          <!-- Left part with text -->
+          <div class='flex-grow'>
+            <h3
+              class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'
+            >
+              CLASSIC
+            </h3>
+            <ul class='mt-4 text-zinc-700 space-y-2'>
+              <li class='flex items-center'>
+                <strong>Nový Set</strong>: 1700 Kč
+              </li>
+              <li class='flex items-center'>
+                <strong>Doplnění</strong>:
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
+                2 týdny - 600 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
+                3 týdny - 700 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
+                4 týdny - 1000 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
+                5 týdnů - 1300 Kč
+              </li>
+            </ul>
+          </div>
 
-        <!-- Left part with text -->
-        <div class='flex-grow'>
-          <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
-            CLASSIC
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li class='flex items-center'>
-              <strong>Nový Set</strong>: 1700 Kč
-            </li>
-            <li class='flex items-center'>
-              <strong>Doplnění</strong>:
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
-              2 týdny - 600 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
-              3 týdny - 700 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
-              4 týdny - 1000 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />
-              5 týdnů - 1300 Kč
-            </li>
-          </ul>
-        </div>
-
-        <!-- Right side (image) -->
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/classic.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
-        </div>
-      </div>
-
-      <!-- Cashmere Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            CASHMERE
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li><strong>Nový Set</strong>: 1850 Kč</li>
-            <li><strong>Doplnění</strong>:</li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 650 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 750 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 900 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1100 Kč
-            </li>
-          </ul>
-        </div>
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/cashmere.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
-        </div>
-      </div>
-
-      <!-- Light Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            LIGHT VOLUME (2D - 3D)
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li><strong>Nový Set</strong>: 2000 Kč</li>
-            <li><strong>Doplnění</strong>:</li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 700 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 800 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1000 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1300 Kč
-            </li>
-          </ul>
-        </div>
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/light-volume.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
-        </div>
-      </div>
-
-      <!-- Mega Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            MEGA VOLUME (4D - 5D)
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li><strong>Nový Set</strong>: 2500 Kč</li>
-            <li><strong>Doplnění</strong>:</li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 800 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 900 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1100 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1400 Kč
-            </li>
-          </ul>
+          <!-- Right side (image) -->
+          <div class='flex-shrink-0 flex items-center h-full'>
+            <img
+              src='/classic.webp'
+              alt='Decorative icon'
+              class='w-32 h-32 rounded-lg object-cover'
+            />
+          </div>
         </div>
 
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/mega-volume.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
-        </div>
-      </div>
-
-      <!-- Super Volume Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex items-center justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            SUPER VOLUME (6D - 8D)
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li><strong>Nový Set</strong>: 2900 Kč</li>
-            <li><strong>Doplnění</strong>:</li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 900 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 1000 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1300 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1600 Kč
-            </li>
-          </ul>
-        </div>
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/super-volume.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
-        </div>
-      </div>
-
-      <!-- Additional Services Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            SPODNÝ RASY
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Spodný rasy - 450 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech - Nový Set
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Pena - 400 Kč
-            </li>
-          </ul>
+        <!-- Cashmere Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
+          <div class='flex-grow'>
+            <h3
+              class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+            >
+              CASHMERE
+            </h3>
+            <ul class='mt-4 text-zinc-700 space-y-2'>
+              <li><strong>Nový Set</strong>: 1850 Kč</li>
+              <li><strong>Doplnění</strong>:</li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 650 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 750 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 900 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1100 Kč
+              </li>
+            </ul>
+          </div>
+          <div class='flex-shrink-0 flex items-center h-full'>
+            <img
+              src='/cashmere.webp'
+              alt='Decorative icon'
+              class='w-32 h-32 rounded-lg object-cover'
+            />
+          </div>
         </div>
 
-        <!-- Right side (image) -->
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img
-            src='/lash-brow.webp'
-            alt='Decorative icon'
-            class='w-32 h-32 rounded-lg object-cover'
-          />
+        <!-- Light Volume Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
+          <div class='flex-grow'>
+            <h3
+              class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+            >
+              LIGHT VOLUME (2D - 3D)
+            </h3>
+            <ul class='mt-4 text-zinc-700 space-y-2'>
+              <li><strong>Nový Set</strong>: 2000 Kč</li>
+              <li><strong>Doplnění</strong>:</li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 700 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 800 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1000 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1300 Kč
+              </li>
+            </ul>
+          </div>
+          <div class='flex-shrink-0 flex items-center h-full'>
+            <img
+              src='/light-volume.webp'
+              alt='Decorative icon'
+              class='w-32 h-32 rounded-lg object-cover'
+            />
+          </div>
         </div>
-      </div>
 
-      <!-- Brows Section -->
-      <div class='relative bg-white rounded-xl p-6 shadow card flex justify-between'>
-        <div class='flex-grow'>
-          <h3
-            class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
-          >
-            BROWS
-          </h3>
-          <ul class='mt-4 text-zinc-700 space-y-2'>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Trvarovaný - 150 Kč
-            </li>
-            <li class='flex items-center'>
-              <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Barvení - 150 Kč
-            </li>
-          </ul>
+        <!-- Mega Volume Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
+          <div class='flex-grow'>
+            <h3
+              class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+            >
+              MEGA VOLUME (4D - 5D)
+            </h3>
+            <ul class='mt-4 text-zinc-700 space-y-2'>
+              <li><strong>Nový Set</strong>: 2500 Kč</li>
+              <li><strong>Doplnění</strong>:</li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 800 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 900 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1100 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1400 Kč
+              </li>
+            </ul>
+          </div>
+
+          <div class='flex-shrink-0 flex items-center h-full'>
+            <img
+              src='/mega-volume.webp'
+              alt='Decorative icon'
+              class='w-32 h-32 rounded-lg object-cover'
+            />
+          </div>
         </div>
 
-        <div class='flex-shrink-0 flex items-center h-full'>
-          <img src='/brows.webp' alt='Decorative icon' class='w-32 h-32 rounded-lg object-cover' />
+        <!-- Super Volume Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex items-center justify-between card'>
+          <div class='flex-grow'>
+            <h3
+              class='text-black hover:text-black/50 gap-4 tracking-tighter inline-flex font-bold text-lg md:text-xl'
+            >
+              SUPER VOLUME (6D - 8D)
+            </h3>
+            <ul class='mt-4 text-zinc-700 space-y-2'>
+              <li><strong>Nový Set</strong>: 2900 Kč</li>
+              <li><strong>Doplnění</strong>:</li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />2 týdny - 900 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />3 týdny - 1000 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />4 týdny - 1300 Kč
+              </li>
+              <li class='flex items-center'>
+                <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />5 týdnů - 1600 Kč
+              </li>
+            </ul>
+          </div>
+          <div class='flex-shrink-0 flex items-center h-full'>
+            <img
+              src='/super-volume.webp'
+              alt='Decorative icon'
+              class='w-32 h-32 rounded-lg object-cover'
+            />
+          </div>
         </div>
-      </div>
+
+        <!-- Additional Services Section -->
+        <div class='relative bg-white rounded-xl p-6 shadow flex flex-col gap-8 card'>
+          <!-- SPODNÝ RASY Section -->
+          <div class='flex items-center justify-between'>
+            <!-- Text content -->
+            <div class='flex-grow'>
+              <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
+                SPODNÝ RASY
+              </h3>
+              <ul class='mt-4 text-zinc-700 space-y-2'>
+                <li class='flex items-center'>
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Spodný rasy - 450 Kč
+                </li>
+                <li class='flex items-center'>
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Doplnění po 6 týdnech - Nový Set
+                </li>
+                <li class='flex items-center'>
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Pena - 400 Kč
+                </li>
+              </ul>
+            </div>
+            <!-- Image content -->
+            <div class='flex-shrink-0 ml-6'>
+              <img
+                src='/brows.webp'
+                alt='Decorative icon'
+                class='w-32 h-32 rounded-lg object-cover'
+              />
+            </div>
+          </div>
+        
+          <!-- BROWS Section -->
+          <div class='flex items-center justify-between'>
+            <!-- Text content -->
+            <div class='flex-grow'>
+              <h3 class='text-black hover:text-black/50 tracking-tighter font-bold text-lg md:text-xl'>
+                BROWS
+              </h3>
+              <ul class='mt-4 text-zinc-700 space-y-2'>
+                <li class='flex items-center'>
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Trvarovaný - 150 Kč
+                </li>
+                <li class='flex items-center'>
+                  <img src='/dot.png' alt='Icon' class='w-5 h-5 mr-2' />Barvení - 150 Kč
+                </li>
+              </ul>
+            </div>
+            <!-- Image content -->
+            <div class='flex-shrink-0 ml-6'>
+              <img
+                src='/lash-brow.webp'
+                alt='Decorative icon'
+                class='w-32 h-32 rounded-lg object-cover'
+              />
+            </div>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </section>
+
+<style>
+  @media (max-width: 768px) {
+    .cards-container {
+      position: relative;
+    }
+
+    .card {
+      position: sticky;
+      top: 80px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s ease-out;
+      will-change: transform, opacity;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:nth-child(1) { z-index: 1; }
+    .card:nth-child(2) { z-index: 2; }
+    .card:nth-child(3) { z-index: 3; }
+    .card:nth-child(4) { z-index: 4; }
+    .card:nth-child(5) { z-index: 5; }
+    .card:nth-child(6) { z-index: 6; }
+    .card:nth-child(7) { z-index: 7; }
+  }
+</style>
+
+<script>
+  if (window.innerWidth < 768) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      card.style.zIndex = index + 1;
+      observer.observe(card);
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        cards.forEach(card => {
+          observer.unobserve(card);
+          card.classList.remove('visible');
+        });
+      }
+    });
+  }
+</script>

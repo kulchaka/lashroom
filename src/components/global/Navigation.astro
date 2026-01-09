@@ -3,60 +3,97 @@
     <div class='w-full mx-auto'>
       <div
         x-data='{ open: false }'
-        class='relative flex flex-col w-full p-2 md:p-3 mx-auto backdrop-blur-xl backdrop-saturate-150 bg-white/50 ring-1 uppercase ring-zinc-200 rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row shadow-lg'
+        class='relative flex flex-col w-full p-2 md:p-3 mx-auto backdrop-blur-xl backdrop-saturate-150 bg-white/50 ring-1 uppercase ring-zinc-200 rounded-xl md:rounded-full md:items-center md:justify-between md:flex-row shadow-lg dark:bg-zinc-800/50 dark:ring-zinc-700'
       >
         <div class='flex flex-row items-center justify-between md:justify-start'>
           <a
-            class='text-black hover:text-black/50 gap-4 items-center tracking-tighter inline-flex font-bold ml-2 text-lg md:text-xl'
+            class='text-black hover:text-black/50 gap-4 items-center tracking-tighter inline-flex font-bold ml-2 text-lg md:text-xl dark:text-zinc-100 dark:hover:text-zinc-300'
             href='/'
             title='linke to main page'
           >
             lashroom
           </a>
-          <button
-            @click='open = !open'
-            class='inline-flex items-center justify-center p-1 md:p-2 text-black hover:text-cyan-300 focus:outline-none focus:text-black md:hidden'
-          >
-            <svg
-              class='w-5 h-5 md:w-6 md:h-6'
-              stroke='currentColor'
-              fill='none'
-              viewBox='0 0 24 24'
+          <div class='flex items-center gap-2'>
+            <!-- Dark mode toggle -->
+            <button
+              @click='toggleTheme()'
+              class='inline-flex items-center justify-center p-2 text-zinc-900 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-100 dark:text-zinc-300 dark:hover:text-cyan-300 dark:focus-visible:ring-offset-zinc-950'
+              aria-label='Toggle dark mode'
             >
-              <path
-                :class="{'hidden': open, 'inline-flex': !open }"
-                class='inline-flex'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M4 6h16M4 12h16M4 18h16'></path>
-              <path
-                :class="{'hidden': !open, 'inline-flex': open }"
-                class='hidden'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                d='M6 18L18 6M6 6l12 12'></path>
-            </svg>
-          </button>
+              <!-- Sun icon -->
+              <svg
+                class='w-5 h-5 hidden dark:block'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                ></path>
+              </svg>
+              <!-- Moon icon -->
+              <svg
+                class='w-5 h-5 block dark:hidden'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
+                ></path>
+              </svg>
+            </button>
+            <button
+              @click='open = !open'
+              class='inline-flex items-center justify-center p-1 md:p-2 text-zinc-900 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-100 md:hidden dark:text-zinc-300 dark:focus-visible:ring-offset-zinc-950'
+            >
+              <svg
+                class='w-5 h-5 md:w-6 md:h-6'
+                stroke='currentColor'
+                fill='none'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  :class="{'hidden': open, 'inline-flex': !open }"
+                  class='inline-flex'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M4 6h16M4 12h16M4 18h16'></path>
+                <path
+                  :class="{'hidden': !open, 'inline-flex': open }"
+                  class='hidden'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M6 18L18 6M6 6l12 12'></path>
+              </svg>
+            </button>
+          </div>
         </div>
         <nav
           :class="{'flex': open, 'hidden': !open}"
-          class='flex-col flex-grow hidden py-8 md:py-0 md:flex md:items-end justify-center md:flex-row'
+          class='flex-col grow hidden py-8 md:py-0 md:flex md:items-end justify-center md:flex-row'
         >
           <ul
-            class='space-y-4 list-none text-lg md:text-base font-bold text-zinc-700 md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3 md:gap-4'
+            class='space-y-4 list-none text-lg md:text-base font-bold text-zinc-700 md:space-y-0 md:ml-auto items-center md:inline-flex justify-center text-center md:text-left gap-3 md:gap-4 dark:text-zinc-200'
           >
             <li>
-              <a href='#home' class='hover:text-black' @click='open = false'>Domů</a>
+              <a href='#home' class='hover:text-zinc-900 dark:hover:text-zinc-100' @click='open = false'>Domů</a>
             </li>
-            <li><a href='#price' class='hover:text-black' @click='open = false'>služby</a></li>
-            <li><a href='#course' class='hover:text-black' @click='open = false'>Kurzy</a></li>
+            <li><a href='#price' class='hover:text-zinc-900 dark:hover:text-zinc-100' @click='open = false'>služby</a></li>
+            <li><a href='#course' class='hover:text-zinc-900 dark:hover:text-zinc-100' @click='open = false'>Kurzy</a></li>
 
             <li>
               <a
                 href='#contacts'
-                class='py-2 px-4 md:py-2 md:px-4 border-2 h-10 focus:ring-2 rounded-full border-black bg-black/5 hover:bg-transparent text-black duration-200 focus:ring-offset-2 hover:text-black inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent'
+                class='py-2 px-4 md:py-2 md:px-4 border-2 h-10 focus:ring-2 rounded-full border-black bg-black/5 hover:bg-transparent text-black duration-200 focus:ring-offset-2 hover:text-black inline-flex items-center justify-center ring-2 focus:ring-black ring-transparent dark:border-zinc-700 dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/15 dark:hover:text-white dark:ring-zinc-700 dark:focus:ring-cyan-300 dark:focus:ring-offset-zinc-950'
                 @click='open = false'
               >
                 Kontakty

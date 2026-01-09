@@ -2,17 +2,64 @@
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-scrollbar-hide";
-@theme {
-  --variable-name: value;
-}
+
+@variant dark (&:where(.dark, .dark *));
 
 :root {
   font-family: Inter, sans-serif;
-
 }
 @supports (font-variation-settings: normal) {
   /* Use variable font if supported */
   :root {
     font-family: InterVariable, sans-serif;
   }
+}
+
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+.dark .dark\:bg-white\/50 {
+  @apply bg-zinc-800/50;
+}
+
+.dark .dark\:text-black {
+  @apply text-zinc-100;
+}
+
+.dark .dark\:text-zinc-700 {
+  @apply text-zinc-300;
+}
+
+.dark .dark\:border-zinc-200 {
+  @apply border-zinc-700;
+}
+
+.dark .dark\:ring-zinc-200 {
+  @apply ring-zinc-700;
+}
+
+.dark .dark\:hover\:text-black:hover {
+  @apply text-zinc-300;
+}
+
+.dark .dark\:bg-black\/5 {
+  @apply bg-white/10;
+}
+
+.dark .dark\:ring-black {
+  @apply ring-zinc-600;
+}
+
+.dark .dark\:ring-transparent {
+  @apply ring-zinc-600;
+}
+
+.dark .dark\:focus\:ring-black:focus {
+  @apply ring-zinc-500;
 }

@@ -1,39 +1,40 @@
 ---
 import "../styles/global.css";
-import { AstroSeo } from '@astrolib/seo';
+import { SEO } from 'astro-seo';
 import Favicons from "./global/Favicons.astro";
 
 ---
-<AstroSeo
+<SEO
   title="lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci"
   description="Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy."
   canonical="https://www.lashroom.cz"
   openGraph={{
-    url: "https://www.lashroom.cz",
-    title: "lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci",
-    description: "Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy.",
-    images: [
-      {
-        url: "https://www.lashroom.cz/km.webp",
-        width: 800,
-        height: 600,
-        alt: "Ilustrace prodlužování řas",
-        type: "image/jpeg",
-      },
-      {
-        url: "https://www.lashroom.cz/cert.png",
-        width: 800,
-        height: 600,
-        alt: "Certifikát kurzu lashroom.cz",
-        type: "image/png",
-      },
-    ],
-    site_name: "lashroom.cz",
+    basic: {
+      title: "lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci",
+      type: "website",
+      image: "https://www.lashroom.cz/km.webp",
+      url: "https://www.lashroom.cz",
+    },
+    optional: {
+      description: "Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy.",
+      siteName: "lashroom.cz",
+    },
+    image: {
+      url: "https://www.lashroom.cz/km.webp",
+      width: 800,
+      height: 600,
+      alt: "Ilustrace prodlužování řas",
+      type: "image/webp",
+    },
   }}
   twitter={{
-    handle: "@lashroom.cz",
+    card: "summary_large_image",
     site: "https://www.lashroom.cz",
-    cardType: "summary_large_image",
+    creator: "@lashroom.cz",
+    title: "lashroom.cz | Profesionální prodlužování řas a kurzy v Olomouci",
+    description: "Profesionální prodlužování řas a kurzy v Olomouci. S více než 8 lety zkušeností a tisíci spokojenými klienty nabízí lashroom.cz jedinečné služby a vzdělání v oblasti krásy.",
+    image: "https://www.lashroom.cz/km.webp",
+    imageAlt: "Ilustrace prodlužování řas",
   }}
 />
 <meta charset="utf-8" />
@@ -47,3 +48,30 @@ import Favicons from "./global/Favicons.astro";
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script is:inline>
+  // Dark mode toggle script
+  function initTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  function toggleTheme() {
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
+    } else {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
+    }
+  }
+
+  window.toggleTheme = toggleTheme;
+  initTheme();
+  document.addEventListener('astro:page-load', () => {
+    initTheme();
+  });
+</script>

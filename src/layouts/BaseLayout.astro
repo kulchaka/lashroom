@@ -4,14 +4,14 @@ import Navigation from "@/components/global/Navigation.astro"
 import Footer from "@/components/global/Footer.astro"
 ---
 
-<html lang="en" class="scroll-smooth selection:bg-black selection:text-white">
+<html lang="en" class="scroll-smooth selection:bg-black selection:text-white dark:selection:bg-cyan-300 dark:selection:text-zinc-900">
   <head>
     <BaseHead />
   </head>
-  <body class="bg-zinc-100 flex flex-col min-h-screen mx-auto 2xl:max-w-screen-xl relative">
+  <body class="bg-zinc-100 text-zinc-900 flex flex-col min-h-screen mx-auto 2xl:max-w-7xl relative dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
 
     <Navigation/>
-    <main class="flex-grow"><slot /></main>
+    <main class="grow"><slot /></main>
     <Footer/>
 
   </body>

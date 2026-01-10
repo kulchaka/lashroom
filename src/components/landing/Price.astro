@@ -241,13 +241,13 @@
 
 <script is:inline>
   if (window.innerWidth < 768) { const cards = document.querySelectorAll('.card'); const observer =
-  new IntersectionObserver((entries) => { entries.forEach((entry, index) => { if
-  (entry.isIntersecting) { entry.target.classList.add('visible'); } else if
-  (entry.boundingClientRect.top < 80) { entry.target.classList.add('stacked'); } }); }, { root:
-  null, rootMargin: '0px', threshold: 0.1 }); cards.forEach(card => observer.observe(card));
-  window.addEventListener('resize', () => { if (window.innerWidth >= 768) { cards.forEach(card => {
-  observer.unobserve(card); card.classList.remove('visible', 'stacked'); }); } }); } let
-  previousWidth = window.innerWidth; window.addEventListener('resize', () => { const currentWidth =
-  window.innerWidth; if ((previousWidth > 768 && currentWidth <= 768)) { location.reload(); }
-  previousWidth = currentWidth; });
+  new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) {
+  entry.target.classList.add('visible'); } else if (entry.boundingClientRect.top < 80) {
+  entry.target.classList.add('stacked'); } }); }, { root: null, rootMargin: '0px', threshold: 0.1
+  }); cards.forEach(card => observer.observe(card)); window.addEventListener('resize', () => { if
+  (window.innerWidth >= 768) { cards.forEach(card => { observer.unobserve(card);
+  card.classList.remove('visible', 'stacked'); }); } }); } let previousWidth = window.innerWidth;
+  window.addEventListener('resize', () => { const currentWidth = window.innerWidth; if
+  ((previousWidth > 768 && currentWidth <= 768)) { location.reload(); } previousWidth =
+  currentWidth; });
 </script>

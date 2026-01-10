@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   // Add your domain name here
-  site: "https://lexingtonthemes.com/",
+  site: "https://www.lashroom.cz",
   integrations: [sitemap()]
 });

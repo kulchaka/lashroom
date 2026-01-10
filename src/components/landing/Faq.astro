@@ -6,8 +6,9 @@
       </h2>
       <p class='mt-5 text-zinc-900 dark:text-zinc-200'>
         Nemůžete najít odpověď? Pošlete nám <a
-          class='text-blue-500 hover:text-zinc-900 duration-200 dark:text-cyan-300 dark:hover:text-cyan-200'
-          href='mailto:gamu4ka@gmail.com'>email</a
+          class='text-zinc-900 hover:text-zinc-600 duration-200 dark:text-zinc-100 dark:hover:text-zinc-300 cursor-hover'
+          href='mailto:gamu4ka@gmail.com'
+          data-cursor='email'>email</a
         > a co nejdříve vám odpovíme.
       </p>
     </div>
@@ -19,7 +20,7 @@
         <!-- FAQ: Difference between lash extension types -->
         <li class='relative'>
           <button
-            class='w-full p-4 text-left cursor-pointer'
+            class='w-full p-4 text-left'
             @click='selected !== 1 ? selected = 1 : selected = null'
             type='button'
           >
@@ -58,12 +59,14 @@
         <!-- FAQ: Lash extension duration -->
         <li class='relative'>
           <button
-            class='w-full p-4 text-left cursor-pointer'
+            class='w-full p-4 text-left'
             @click='selected !== 2 ? selected = 2 : selected = null'
             type='button'
           >
             <div class='items-center flex justify-between text-zinc-900 dark:text-zinc-100'>
-              <p class='text-lg tracking-tight text-zinc-900 dark:text-zinc-100'>Jak dlouho prodloužené řasy vydrží?</p>
+              <p class='text-lg tracking-tight text-zinc-900 dark:text-zinc-100'>
+                Jak dlouho prodloužené řasy vydrží?
+              </p>
               <svg
                 class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
                 :class="{'rotate-180': selected == 2}"
@@ -94,7 +97,7 @@
         <!-- FAQ: Course Structure -->
         <li class='relative'>
           <button
-            class='w-full p-4 text-left cursor-pointer'
+            class='w-full p-4 text-left'
             @click='selected !== 3 ? selected = 3 : selected = null'
             type='button'
           >
@@ -132,7 +135,7 @@
         <!-- FAQ: Challenges of Lash Stylist Work -->
         <li class='relative'>
           <button
-            class='w-full p-4 text-left cursor-pointer'
+            class='w-full p-4 text-left'
             @click='selected !== 4 ? selected = 4 : selected = null'
             type='button'
           >

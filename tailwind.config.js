@@ -1,18 +1,17 @@
 // tailwind.config.js
+// Tailwind CSS v4 uses CSS-based configuration
+// This file is kept for backwards compatibility but is not used in v4
+// Configuration should be done in your CSS file using @theme directive
+
 module.exports = {
   content: [
-    './src/**/*.{astro,js,jsx,ts,tsx}', // Adjust if your files are elsewhere
+    './src/**/*.{astro,js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {
       height: {
-        '90vh': '90vh', // custom utility for 90vh
+        '90vh': '90vh',
       },
-    },
-  },
-  variants: {
-    extend: {
-      height: ['responsive'], // make height responsive
     },
   },
   plugins: [],

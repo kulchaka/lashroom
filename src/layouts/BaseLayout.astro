@@ -2,14 +2,20 @@
 import BaseHead from "@/components/BaseHead.astro";
 import Navigation from "@/components/global/Navigation.astro"
 import Footer from "@/components/global/Footer.astro"
+import CustomCursor from "@/components/global/CustomCursor.astro"
+import LoadingScreen from "@/components/global/LoadingScreen.astro"
+import ScrollIndicator from "@/components/global/ScrollIndicator.astro"
 ---
 
-<html lang="en" class="scroll-smooth selection:bg-black selection:text-white dark:selection:bg-cyan-300 dark:selection:text-zinc-900">
+<html lang="en" class="scroll-smooth selection:bg-black selection:text-white dark:selection:bg-zinc-700 dark:selection:text-zinc-100">
   <head>
     <BaseHead />
   </head>
   <body class="bg-zinc-100 text-zinc-900 flex flex-col min-h-screen mx-auto 2xl:max-w-7xl relative dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300">
 
+    <LoadingScreen />
+    <CustomCursor />
+    <ScrollIndicator />
     <Navigation/>
     <main class="grow"><slot /></main>
     <Footer/>

@@ -1,0 +1,61 @@
+---
+// Scroll Indicator Component
+---
+
+<div class="hero-scroll-indicator fixed bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center gap-4 opacity-0 animate-fadeIn" id="scroll-indicator">
+  <span class="text-xs tracking-widest text-zinc-600 dark:text-zinc-400 writing-mode-vertical-rl">SCROLL</span>
+  <div class="scroll-line w-px h-16 bg-gradient-to-b from-zinc-900 to-transparent dark:from-zinc-100 animate-scrollPulse"></div>
+</div>
+
+<style>
+@keyframes fadeIn {
+  to { opacity: 0.8; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleY(1); opacity: 1; }
+  50% { transform: scaleY(0.5); opacity: 0.5; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards 2s;
+}
+
+.animate-scrollPulse {
+  animation: scrollPulse 2s ease infinite;
+}
+
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollIndicator = document.getElementById('scroll-indicator');
+
+  if (!scrollIndicator) return;
+
+  // Hide scroll indicator when user scrolls
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight * 0.8) {
+      scrollIndicator.style.opacity = '0';
+      scrollIndicator.style.pointerEvents = 'none';
+    } else {
+      scrollIndicator.style.opacity = '0.8';
+      scrollIndicator.style.pointerEvents = 'auto';
+    }
+  });
+
+  // Smooth scroll to next section when indicator is clicked
+  scrollIndicator.addEventListener('click', () => {
+    const nextSection = document.querySelector('section:not(.hero)');
+    if (nextSection) {
+      nextSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>

@@ -132,7 +132,7 @@
           </div>
         </li>
 
-        <!-- FAQ: Challenges of Lash Stylist Work -->
+        <!-- FAQ: Why choose our course -->
         <li class='relative'>
           <button
             class='w-full p-4 text-left'
@@ -140,7 +140,9 @@
             type='button'
           >
             <div class='items-center flex justify-between text-zinc-900 dark:text-zinc-100'>
-              <p class='text-lg tracking-tight text-zinc-900 dark:text-zinc-100'>Jak ?</p>
+              <p class='text-lg tracking-tight text-zinc-900 dark:text-zinc-100'>
+                Proč zvolit právě náš kurz?
+              </p>
               <svg
                 class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
                 :class="{'rotate-180': selected == 4}"
@@ -160,7 +162,51 @@
             x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''"
             x-ref='container4'
           >
-            <div class='text-sm text-zinc-500 p-8 pt-0 dark:text-zinc-300'></div>
+            <div class='text-sm text-zinc-500 p-8 pt-0 dark:text-zinc-300'>
+              Tento kurz se zaměřuje nejen na technickou stránku prodlužování řas, ale také na
+              rozvoj vašich podnikatelských schopností. Každý účastník dostane přístup k našim
+              exkluzivním materiálům, které obsahují krok za krokem postupy, tipy pro úspěšné
+              podnikání a možnost konzultací s našimi zkušenými instruktory.
+            </div>
+          </div>
+        </li>
+
+        <!-- FAQ: What you receive after course -->
+        <li class='relative'>
+          <button
+            class='w-full p-4 text-left'
+            @click='selected !== 5 ? selected = 5 : selected = null'
+            type='button'
+          >
+            <div class='items-center flex justify-between text-zinc-900 dark:text-zinc-100'>
+              <p class='text-lg tracking-tight text-zinc-900 dark:text-zinc-100'>
+                Co obdržíte po absolvování kurzu?
+              </p>
+              <svg
+                class='ml-4 duration-200 h-5 inline transform transition-transform w-5'
+                :class="{'rotate-180': selected == 5}"
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+                  clip-rule='evenodd'
+                  fill-rule='evenodd'></path>
+              </svg>
+            </div>
+          </button>
+          <div
+            class='relative overflow-hidden duration-700 max-h-0 transition-all'
+            x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''"
+            x-ref='container5'
+          >
+            <div class='text-sm text-zinc-500 p-8 pt-0 dark:text-zinc-300'>
+              Po úspěšném dokončení kurzu získáte především neocenitelnou praxi a dovednosti
+              potřebné pro profesionální práci, potvrzené certifikátem. Získáte také přístup k našim
+              podrobným příručkám a videonávodům, které vám pomohou při práci. I po ukončení kurzu
+              vám naši instruktoři budou k dispozici pro konzultace.
+            </div>
           </div>
         </li>
       </ul>

@@ -8,6 +8,13 @@
 </div>
 
 <style>
+.hidden-indicator {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
 @keyframes fadeIn {
   to { opacity: 0.8; }
 }
@@ -36,16 +43,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!scrollIndicator) return;
 
-  // Hide scroll indicator when user scrolls
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight * 0.8) {
-      scrollIndicator.style.opacity = '0';
-      scrollIndicator.style.pointerEvents = 'none';
+  // Hide scroll indicator when user starts scrolling
+  const handleScroll = () => {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollPosition > 50) {
+      scrollIndicator.classList.add('hidden-indicator');
+      scrollIndicator.style.display = 'none';
     } else {
-      scrollIndicator.style.opacity = '0.8';
-      scrollIndicator.style.pointerEvents = 'auto';
+      scrollIndicator.classList.remove('hidden-indicator');
+      scrollIndicator.style.display = 'flex';
     }
-  });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener('resize', handleScroll, { passive: true });
+  handleScroll(); // Check initial position
 
   // Smooth scroll to next section when indicator is clicked
   scrollIndicator.addEventListener('click', () => {

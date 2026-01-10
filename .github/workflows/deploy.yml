@@ -27,8 +27,8 @@ jobs:
       - name: 🚀 Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_HOST || 'server85.viwefix.cz' }}
-          username: ${{ secrets.FTP_USER }}
+          server: server85.viwefix.cz
+          username: ${{ secrets.FTP_USER || 'lh12657400' }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /www_root/
